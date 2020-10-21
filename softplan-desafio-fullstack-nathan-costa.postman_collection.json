@@ -33,63 +33,6 @@
 			"response": []
 		},
 		{
-			"name": "auth validando permissão",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"admin3@admin.com.br\",\r\n    \"senha\":\"123456\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/auth",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"auth"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "teste",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"admin@admin.com\",\r\n    \"senha\":\"123456\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/auth",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"auth"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "create usuario",
 			"request": {
 				"method": "POST",
@@ -133,7 +76,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDMwNzQ2NDUxMzUsImV4cCI6MTYwMzY3OTQ0NX0.hs66obE9-Mz06m5lGOpyFmmgMgV-2RJn-VY4BrJy6OVLd6PtuenxfWldNHjXiXAEbkMFCrqao1vMOS_f0ruTtQ",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDMyMzcwMzE4NDcsImV4cCI6MTYwMzg0MTgzMX0.chfs4SmvTPI1xOKjp8ldkdPyzC9TnHAh7iY7wd1Pbw_ZOJDqxUzlLZCFMakiF-p_wwdHEH_6ndyJmN70XGhOOg",
 						"type": "text"
 					}
 				],
@@ -161,7 +104,7 @@
 			"response": []
 		},
 		{
-			"name": "usuarios teste usuarios",
+			"name": "usuarios / filtro email",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -171,7 +114,7 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDMwNzQ2NDUxMzUsImV4cCI6MTYwMzY3OTQ0NX0.hs66obE9-Mz06m5lGOpyFmmgMgV-2RJn-VY4BrJy6OVLd6PtuenxfWldNHjXiXAEbkMFCrqao1vMOS_f0ruTtQ"
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDMyMzcwMzE4NDcsImV4cCI6MTYwMzg0MTgzMX0.chfs4SmvTPI1xOKjp8ldkdPyzC9TnHAh7iY7wd1Pbw_ZOJDqxUzlLZCFMakiF-p_wwdHEH_6ndyJmN70XGhOOg"
 					}
 				],
 				"body": {
@@ -184,7 +127,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/usuario",
+					"raw": "localhost:8080/api/usuario?email=admin@admin.com",
 					"host": [
 						"localhost"
 					],
@@ -192,37 +135,12 @@
 					"path": [
 						"api",
 						"usuario"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "usuarios teste usuarios ultimo teste",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "admin@admin.com"
 						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/api/usuario",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
-						"usuario"
 					]
 				}
 			},
@@ -279,7 +197,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "       {\r\n            \"nome\": \"teste 2\",\r\n            \"email\": \"admin222222@admin.com\",\r\n            \"perfil\": \"ROLE_ADMIN\",\r\n            \"senha\":\"bartemel040993\"\r\n        }",
+					"raw": "       {\r\n            \"nome\": \"teste 2er\",\r\n            \"email\": \"admin222222t@admin.com\",\r\n            \"perfil\": \"ROLE_ADMIN\",\r\n            \"senha\":\"nathan\"\r\n        }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -287,15 +205,15 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/usuarios/2",
+					"raw": "localhost:8080/api/usuario/1",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"usuarios",
-						"2"
+						"usuario",
+						"1"
 					]
 				}
 			},
@@ -418,7 +336,7 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDIzMDU4NDQwMzgsImV4cCI6MTYwMjkxMDY0NH0.WLzYxR9ljovLTT3zasWblOb90DRmmXsQFaGJMJmuazaz9UaUeNe1fwRhHI75prt2TpfaEQR0RkDPOWhJkEnfBw"
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDMyNDk1MTMwMDYsImV4cCI6MTYwMzg1NDMxM30.FbqYDv80hyuEtnSSnhoo0N21aUzurr8jfDgQ6nM7zNhezFug11p039wo0FMDcNKso0LJ2Y1h8i9vN4HIZ9QQAQ"
 					}
 				],
 				"body": {
@@ -431,7 +349,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/processo/2",
+					"raw": "localhost:8080/api/processo/1",
 					"host": [
 						"localhost"
 					],
@@ -439,7 +357,7 @@
 					"path": [
 						"api",
 						"processo",
-						"2"
+						"1"
 					]
 				}
 			},
@@ -453,7 +371,7 @@
 					{
 						"key": "Authorization",
 						"type": "text",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDIzMDU4NDQwMzgsImV4cCI6MTYwMjkxMDY0NH0.WLzYxR9ljovLTT3zasWblOb90DRmmXsQFaGJMJmuazaz9UaUeNe1fwRhHI75prt2TpfaEQR0RkDPOWhJkEnfBw"
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDMyNDk0MjcwNTIsImV4cCI6MTYwMzg1NDIyN30.Xfejnjx6r8aEHPp0Q6RLmF6ycy8NTWgkAZ9HS9IqY0LYW7OpjL1t21QCqQrVziS2TlAmkRK8rWgS6_5TTSkjow"
 					}
 				],
 				"body": {
@@ -466,7 +384,7 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/usuario/1/processo/2",
+					"raw": "localhost:8080/api/usuario/1/processo/1",
 					"host": [
 						"localhost"
 					],
@@ -476,7 +394,7 @@
 						"usuario",
 						"1",
 						"processo",
-						"2"
+						"1"
 					]
 				}
 			},
@@ -521,7 +439,7 @@
 			"response": []
 		},
 		{
-			"name": "processos/{idProcesso/usuario/{idUsuario}",
+			"name": "parecer - efetuando parecer para processo",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -533,7 +451,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "       {\r\n            \"titulo\": \"Divorcio\",\r\n            \"descricao\": \"Pai não paga pensão\"\r\n        }",
+					"raw": "        {\r\n          \"descricao\": \"Finalizando idenização\"\r\n        }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -541,54 +459,18 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/api/processos/1/usuario/1",
+					"raw": "localhost:8080/api/parecer/usuario/1/processo/2",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
 						"api",
-						"processos",
-						"1",
-						"usuario",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "parecer",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"type": "text",
-						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDIzMDU4NDQwMzgsImV4cCI6MTYwMjkxMDY0NH0.WLzYxR9ljovLTT3zasWblOb90DRmmXsQFaGJMJmuazaz9UaUeNe1fwRhHI75prt2TpfaEQR0RkDPOWhJkEnfBw"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "      {\r\n            \"descricao\": \"Finalizando idenização\"\r\n        }",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/api/usuario/1/processo/1",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"api",
+						"parecer",
 						"usuario",
 						"1",
 						"processo",
-						"1"
+						"2"
 					]
 				}
 			},
