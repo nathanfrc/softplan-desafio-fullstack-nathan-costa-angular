@@ -1,0 +1,39 @@
+﻿
+<h1>Visualizar processo</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+        <div class="form-group col">
+            <label for="nome">Titulo:</label>
+            <input type="text" formControlName="titulo" class="form-control" disabled [ngClass]="{ 'is-invalid': submitted && f.titulo.errors }" />
+            <div *ngIf="submitted && f.titulo.errors" class="invalid-feedback">
+                <div *ngIf="f.titulo.errors.required">Titulo é obrigatorio</div>
+            </div>
+        </div>
+        <div class="form-group col">
+            <label for="lastName">Descrição:</label>
+            <input type="text" formControlName="descricao" class="form-control" disabled [ngClass]="{ 'is-invalid': submitted && f.descricao.errors }" />
+            <div *ngIf="submitted && f.descricao.errors" class="invalid-feedback">
+                <div *ngIf="f.descricao.errors.required">Descrição é obrigatorio</div>
+            </div>
+        </div>
+    </div>
+
+            <div class="form-group">
+                <label for="username">Usuário:</label>
+                <select class="form-control"  formControlName="usuario" [ngClass]="{ 'is-invalid': submitted && f.usuario.errors }">
+                    <option *ngFor="let user of users" value= {{user.id}}>
+                        {{user.nome}}
+                      </option>
+                </select>
+                <div *ngIf="submitted && f.usuario.errors" class="invalid-feedback">
+                    <div *ngIf="f.usuario.errors.required">Usuário é obrigatorio</div>
+                </div>
+            </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary" (click)="atribuir()">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Atribuir Finalizador
+        </button>
+        <a routerLink="/processos" class="btn btn-link">Cancel</a>
+    </div>
+</form>

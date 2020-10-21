@@ -1,0 +1,34 @@
+﻿<h1 *ngIf="!status">Processo Pendentes </h1>
+<h1 *ngIf="status">Todos Processos </h1>
+<a routerLink="add"  routerLinkActive="active" class="btn btn-sm btn-success mb-2">Adicionar Processo</a>
+<a *ngIf="!pendente" routerLink="pen/true" routerLinkActive="active" class="btn btn-sm btn-warning mb-2">Pendentes</a>
+<a *ngIf="pendente" (click)="all()" class="btn btn-sm btn-primary mb-2">Todos</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 30%">Título</th>
+            <th style="width: 30%">Descrição</th>
+            <th style="width: 10%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let processo of processos">
+            <td>{{processo.titulo}}</td>
+            <td>{{processo.descricao}}</td>
+
+            <td *ngIf="status" style="white-space: nowrap">
+                <a routerLink="view/{{processo.id}}" class="btn btn-sm btn-primary mr-1">Atribuir Usuário</a>
+            </td>
+
+            <td *ngIf="!status" style="white-space: nowrap">
+                <a routerLink="parecer/{{processo.id}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="btn btn-sm btn-danger mr-1">Atribuir Parecer</a>
+            </td>
+
+        </tr>
+        <tr *ngIf="!processos">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,21 @@
+﻿<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a class="nav-item nav-link" routerLink="/processos" routerLinkActive="active">Processos</a>
+        <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Usuários</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>
+
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>
+
+<div class="text-center mt-4">
+        <span>
+            Desenvolvido
+            por <strong>Nathan<span class="red">-</span>Costa</strong>
+        </span>
+</div>
