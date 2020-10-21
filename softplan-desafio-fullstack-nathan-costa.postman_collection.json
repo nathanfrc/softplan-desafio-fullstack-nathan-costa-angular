@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "e06bbd15-e152-4241-b6db-1b639a78045d",
+		"name": " softplan-desafio-fullstack-nathan-costa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@admin.com\",\r\n    \"senha\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth validando permissão",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin3@admin.com.br\",\r\n    \"senha\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "teste",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@admin.com\",\r\n    \"senha\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDMxNjAxMTE1MzEsImV4cCI6MTYwMzc2NDkxMX0.gj0avTAglGsOnDtKFAaqjRRLBJUeeX9R4P1dKl9u_W9KMIb721b5dEyqpH9MOuSviPIORwSnc_JoHPmtZ3yR8A",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n            \"nome\": \"Pessoa 656\",\r\n            \"email\": \"admin3@admin.com.br\",\r\n            \"perfil\": \"ROLE_USUARIO_TRIATOR\",\r\n            \"senha\":\"123456\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDMwNzQ2NDUxMzUsImV4cCI6MTYwMzY3OTQ0NX0.hs66obE9-Mz06m5lGOpyFmmgMgV-2RJn-VY4BrJy6OVLd6PtuenxfWldNHjXiXAEbkMFCrqao1vMOS_f0ruTtQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios teste usuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDMwNzQ2NDUxMzUsImV4cCI6MTYwMzY3OTQ0NX0.hs66obE9-Mz06m5lGOpyFmmgMgV-2RJn-VY4BrJy6OVLd6PtuenxfWldNHjXiXAEbkMFCrqao1vMOS_f0ruTtQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios teste usuarios ultimo teste",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuario",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usuarios/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDMyNDk0MjcwNTIsImV4cCI6MTYwMzg1NDIyN30.Xfejnjx6r8aEHPp0Q6RLmF6ycy8NTWgkAZ9HS9IqY0LYW7OpjL1t21QCqQrVziS2TlAmkRK8rWgS6_5TTSkjow",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@admin.com\",\r\n    \"senha\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuario/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar usuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDIyMTAzNTk2MjYsImV4cCI6MTYwMjgxNTE1OX0.u9jPMI78bALLOOEIqD-en1AcetjwBa08ABYSYcKbQfBluLETiTpoms4o0H4aCixMYPwOinrMt1A5iJxOBSvTbQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "       {\r\n            \"nome\": \"teste 2\",\r\n            \"email\": \"admin222222@admin.com\",\r\n            \"perfil\": \"ROLE_ADMIN\",\r\n            \"senha\":\"bartemel040993\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuarios/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuarios",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete usuario",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDIyMTAzNTk2MjYsImV4cCI6MTYwMjgxNTE1OX0.u9jPMI78bALLOOEIqD-en1AcetjwBa08ABYSYcKbQfBluLETiTpoms4o0H4aCixMYPwOinrMt1A5iJxOBSvTbQ"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "       {\r\n            \"nome\": \"teste 2\",\r\n            \"email\": \"admin222222@admin.com\",\r\n            \"perfil\": \"ROLE_ADMIN\",\r\n            \"senha\":\"bartemel040993\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuario/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create processo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDMyMzcwMzE4NDcsImV4cCI6MTYwMzg0MTgzMX0.chfs4SmvTPI1xOKjp8ldkdPyzC9TnHAh7iY7wd1Pbw_ZOJDqxUzlLZCFMakiF-p_wwdHEH_6ndyJmN70XGhOOg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "       {\r\n            \"titulo\": \"Divorcio\",\r\n            \"descricao\": \"Marido bateu na esposa duas vezes e mais vezes\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/processo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"processo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "processos paginable",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDIzMDU4NDQwMzgsImV4cCI6MTYwMjkxMDY0NH0.WLzYxR9ljovLTT3zasWblOb90DRmmXsQFaGJMJmuazaz9UaUeNe1fwRhHI75prt2TpfaEQR0RkDPOWhJkEnfBw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "       {\r\n            \"titulo\": \"Divorcio\",\r\n            \"descricao\": \"Pai não paga pensão\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/processo",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"processo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "processos/{id}",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDIzMDU4NDQwMzgsImV4cCI6MTYwMjkxMDY0NH0.WLzYxR9ljovLTT3zasWblOb90DRmmXsQFaGJMJmuazaz9UaUeNe1fwRhHI75prt2TpfaEQR0RkDPOWhJkEnfBw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "       {\r\n            \"titulo\": \"Divorcio\",\r\n            \"descricao\": \"Pai não paga pensão\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/processo/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"processo",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "processos/usuario/{id} - atribuir ao usuario um processo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDIzMDU4NDQwMzgsImV4cCI6MTYwMjkxMDY0NH0.WLzYxR9ljovLTT3zasWblOb90DRmmXsQFaGJMJmuazaz9UaUeNe1fwRhHI75prt2TpfaEQR0RkDPOWhJkEnfBw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuario/1/processo/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"1",
+						"processo",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/processo/pendentes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDIzMDU4NDQwMzgsImV4cCI6MTYwMjkxMDY0NH0.WLzYxR9ljovLTT3zasWblOb90DRmmXsQFaGJMJmuazaz9UaUeNe1fwRhHI75prt2TpfaEQR0RkDPOWhJkEnfBw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "       {\r\n            \"titulo\": \"Divorcio\",\r\n            \"descricao\": \"Pai não paga pensão\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/processo/pendentes",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"processo",
+						"pendentes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "processos/{idProcesso/usuario/{idUsuario}",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDIzMDU4NDQwMzgsImV4cCI6MTYwMjkxMDY0NH0.WLzYxR9ljovLTT3zasWblOb90DRmmXsQFaGJMJmuazaz9UaUeNe1fwRhHI75prt2TpfaEQR0RkDPOWhJkEnfBw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "       {\r\n            \"titulo\": \"Divorcio\",\r\n            \"descricao\": \"Pai não paga pensão\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/processos/1/usuario/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"processos",
+						"1",
+						"usuario",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "parecer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjoiUk9MRV9BRE1JTiIsImNyZWF0ZWQiOjE2MDIzMDU4NDQwMzgsImV4cCI6MTYwMjkxMDY0NH0.WLzYxR9ljovLTT3zasWblOb90DRmmXsQFaGJMJmuazaz9UaUeNe1fwRhHI75prt2TpfaEQR0RkDPOWhJkEnfBw"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "      {\r\n            \"descricao\": \"Finalizando idenização\"\r\n        }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/usuario/1/processo/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"usuario",
+						"1",
+						"processo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
