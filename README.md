@@ -1,5 +1,5 @@
-# angular-9-registration-login-example
+# angular-front-nathan-costa
+aplicação front-end 
 
-Angular 9 - User Registration and Login Example
+comando para subir ng serve .
 
-Full tutorial with example available at https://jasonwatmore.com/post/2020/04/28/angular-9-user-registration-and-login-example-tutorial
